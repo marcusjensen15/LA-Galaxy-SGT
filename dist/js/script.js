@@ -2,18 +2,19 @@
 let today = new Date().toISOString().split('T', 1)[0];
 
 //add unformated date variable below to compare/hide previous games (marcus edit)
-let todayRaw = new Date();
+let todayUnformatted = new Date('2020','08','6');
 
-//map singleGameTickets to new variable: currentAndFutureGames. Filter method will hide all games happening in the past and up until current game time (today).
+//map singleGameTickets to new variable: currentAndFutureGames. Filter method will hide all games happening in the past and up until current game time (today). (marcus edit)
 
 let currentAndFutureGames = singleGameTickets.filter(function(game){
-   return new Date(game.isoDate).getTime() >= todayRaw.getTime()
+   return new Date(game.isoDate).getTime() >= todayUnformatted.getTime()
 });
 
-console.log(todayRaw);
+console.log(currentAndFutureGames);
+console.log(todayUnformatted.getTime());
+console.log(today);
 
-
-singleGameTickets.forEach((game)=>{
+currentAndFutureGames.forEach((game)=>{
   // grabs information per event object
   const {team, date, isoDate, month, monthShort, location, presaleDescription, time, active, ticketURL, promoContent} = game;
   const {title, description} = promoContent;
@@ -131,10 +132,6 @@ singleGameTickets.forEach((game)=>{
 
 });
 
-
-console.log(today.getTime());
-
-//MJ: Check to see date format we need to run this method on all of them ^
 
 function toggleSides(button) {
   $(button).parent().parent().parent().parent().children().toggleClass('hide');
