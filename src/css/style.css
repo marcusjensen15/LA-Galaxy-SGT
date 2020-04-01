@@ -14,11 +14,6 @@ body {
   display: none;
   transition: ease-in-out 1s; }
 
-/* AD STYLES */
-#adWrapperBottomLeaderboard {
-  overflow: hidden;
-  height: 0px; }
-
 /* SRFC TICKET PAGE STYLES */
 h1 {
   text-align: center; }
@@ -32,6 +27,11 @@ h1 {
       width: calc(100% + 16px);
       margin-left: -8px;
       margin-right: -8px; } }
+
+/* AD STYLES */
+#adWrapperBottomLeaderboard {
+  overflow: hidden;
+  height: 0px; }
 
 .ticket-card {
   position: relative;
@@ -236,6 +236,9 @@ h1 {
     width: 100%;
     margin-top: -18px;
     z-index: 1; }
+
+.splitterMar {
+  display: none; }
 
 /* Family Pack Promo */
 .family-pack.hide {

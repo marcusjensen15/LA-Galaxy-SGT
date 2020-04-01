@@ -1,5 +1,14 @@
 // Formats todays date to be YYY-MM-DD
-let today = new Date().toISOString().split('T', 1)[0];
+// let today = new Date().toISOString().split('T', 1)[0];
+
+let today = new Date();
+// let todayUnix = Date.now();
+
+// let gameUnix = new Date(Date.UTC('2020','04','1','12'))
+
+// this is how we compare games that have happened: console.log(new Date(game.isoDate).getTime() > today.getTime()); likely map method for each game meeting criteria. 
+
+
 
 singleGameTickets.forEach((game)=>{
   // grabs information per event object
@@ -7,7 +16,7 @@ singleGameTickets.forEach((game)=>{
   const {title, description} = promoContent;
   const logoURLpath =  logoURLpaths[team];
   const promoURLpath = promoURLpaths[title]
-  
+
   // displays true or false depending on whether certain fields are empty and is the date is in the past
   const ticketsAvailable = (ticketURL !== '') ? true : false;
   const specialsAvailable = (description !== '') ? true : false;
@@ -30,15 +39,15 @@ singleGameTickets.forEach((game)=>{
 
   //this changes the color of the header by injecting a active/away background color
   const headerColorClass = (active) ? 'header-active' : 'header-away';
-  
+
   //This hides the tickets button depending on the active/away status. It could be placed in other classes to show or hide depending on this status.
   const showClass = (active) ? 'show' : 'hide';
-  
-  
+
+
   // Creates a small triangle SVG to show a active or away game status in the upper left corner of the card
   // const locationText = (active) ? 'H' : 'A';
   // const flagColor = (active) ? '#7c2529' : '#666'
-  
+
   // Corner SVG for active/inactive
   // const flagSVG= `
   //   <svg height="80" width="80">
@@ -68,7 +77,7 @@ singleGameTickets.forEach((game)=>{
           <div class="hero-image-holder logo-image-holder">
             <img class="logo-image" src=${logoURLpath} aria-label="logo for ${team}">
           </div>
-          
+
           <div class="content-holder">
             <div class="team-wrapper">
               <h2 class="team">${team}</h2>
@@ -78,7 +87,7 @@ singleGameTickets.forEach((game)=>{
               <a href=${locationURL()} target="blank" class="location"><i class="fas fa-map-marker-alt"></i> ${location}</a>
               <h4 class="time"><i class="far fa-clock"></i> ${time}</h4>
             </div>
-            <div class="presale-content-wrapper ${presaleContentShowClass}">            
+            <div class="presale-content-wrapper ${presaleContentShowClass}">
               <a class="card-button show openPopup"><i class="fas fa-ticket-alt"></i> ${(`Presale: ${presaleDescription}`).toUpperCase()}</a>
             </div>
             <div class="buttons-panel">
@@ -119,11 +128,16 @@ singleGameTickets.forEach((game)=>{
 
 });
 
+
+console.log(today.getTime());
+
+//MJ: Check to see date format we need to run this method on all of them ^
+
 function toggleSides(button) {
   $(button).parent().parent().parent().parent().children().toggleClass('hide');
 }
 
-// monthheading.js here 
+// monthheading.js here
 
 // familydaypromo.js here
 
