@@ -1,13 +1,16 @@
 // Formats todays date to be YYY-MM-DD
-// let today = new Date().toISOString().split('T', 1)[0];
+let today = new Date().toISOString().split('T', 1)[0];
 
-let today = new Date();
-// let todayUnix = Date.now();
+//add unformated date variable below to compare/hide previous games (marcus edit)
+let todayRaw = new Date();
 
-// let gameUnix = new Date(Date.UTC('2020','04','1','12'))
+//map singleGameTickets to new variable: currentAndFutureGames. Filter method will hide all games happening in the past and up until current game time (today).
 
-// this is how we compare games that have happened: console.log(new Date(game.isoDate).getTime() > today.getTime()); likely map method for each game meeting criteria. 
+let currentAndFutureGames = singleGameTickets.filter(function(game){
+   return new Date(game.isoDate).getTime() >= todayRaw.getTime()
+});
 
+console.log(todayRaw);
 
 
 singleGameTickets.forEach((game)=>{
