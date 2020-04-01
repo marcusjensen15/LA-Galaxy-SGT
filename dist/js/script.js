@@ -1,18 +1,16 @@
 // Formats todays date to be YYY-MM-DD
 let today = new Date().toISOString().split('T', 1)[0];
 
-//add unformated date variable below to compare/hide previous games (marcus edit)
-let todayUnformatted = new Date('2020','08','6');
+//Add todayUnformatted variable below to compare and hide previous games. Comparison most accurate in Unix Time (marcus edit).
+//note: When testing: new Date('2020', '00','02') corresponds to January, 2nd, 2020. Months start at 0.
 
-//map singleGameTickets to new variable: currentAndFutureGames. Filter method will hide all games happening in the past and up until current game time (today). (marcus edit)
+let todayUnformatted = new Date();
+
+//map singleGameTickets to new variable: currentAndFutureGames. Filter method will hide all games happening in the past and up until current game time (todayUnformatted). Converting game date into Unix Time within filter method (marcus edit).
 
 let currentAndFutureGames = singleGameTickets.filter(function(game){
    return new Date(game.isoDate).getTime() >= todayUnformatted.getTime()
 });
-
-console.log(currentAndFutureGames);
-console.log(todayUnformatted.getTime());
-console.log(today);
 
 currentAndFutureGames.forEach((game)=>{
   // grabs information per event object
