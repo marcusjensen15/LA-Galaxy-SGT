@@ -1,0 +1,48 @@
+/* Month Heading Styles */
+.splitterJan,
+.splitterFeb,
+.splitterMar,
+.splitterApr,
+.splitterMay,
+.splitterJun,
+.splitterJul,
+.splitterAug,
+.splitterSept,
+.splitterOct,
+.splitterNov,
+.splitterDec {
+    display: none;
+}
+
+.monthHeading {
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    padding: 0px;
+    margin: 10px 15px 5px;
+
+    & h3 {
+        font-size: 30px;
+        width: fit-content;
+        background: #fff;
+        color: #7c2529;
+        padding: 0px 20px;
+        margin: 0px auto;
+        display: inline-block;
+        z-index: 2;
+    }
+
+    & .golden-rule {
+        background: linear-gradient(to right, #847550, #bda76f);
+        height: 3px;
+        width: 100%;
+        margin-top: -18px;
+        z-index: 1;
+    }
+}
+
+// temporary fix - need to update monthHeading.js to capture the headings along with the events displayed
+.splitterMar {
+    display: none;
+}

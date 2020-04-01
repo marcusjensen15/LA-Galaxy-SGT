@@ -1,0 +1,25 @@
+.eventPromo {
+    height: 187px;
+
+    img {
+        height: 150px;
+        display: block;
+        z-index: 1;
+    }
+
+    p {
+        padding: 5px 8px;
+        margin-top: -20px;
+        background: white !important;
+        display: inline-block;
+        z-index: 2;
+        margin-bottom: 0px;
+        width: 100%;
+    }
+}
+
+.back {
+    .eventPromo {
+        margin-left: 1px;
+    }
+}

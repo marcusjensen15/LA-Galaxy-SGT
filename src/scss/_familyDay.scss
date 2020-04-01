@@ -1,0 +1,38 @@
+/* Family Pack Promo */
+.family-pack.hide {
+    display: none !important;
+}
+
+.Family {
+    height: fit-content;
+    .back {
+        .content-holder {
+            overflow:visible;
+            .eventPromo {
+                height: fit-content;
+                img {
+                    height: 150px;
+                    margin: 0px auto;
+                }
+            }
+            .buttons-panel {
+                &.family-pack {
+                    position: relative;
+                    &.hide {
+                        display: none !important;
+                    }
+                }
+            }
+            .tickets-panel {
+                &.family-pack {
+                    display: block !important;
+                    position: relative;
+
+                    &.hide {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+}

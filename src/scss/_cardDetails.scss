@@ -1,0 +1,50 @@
+.date {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.content-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+}
+
+.promoDescription {
+    padding: 0px;
+    margin: 0px;
+}
+
+.team{
+    font-size: 1.2em;
+    font-weight: 800;
+    transition: all .5s;
+
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.info-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0px 10px 0px 10px;
+    font-size: .9em;
+    margin: 5px 0px 10px;
+}
+
+.location{
+    color:#ba8041;
+    text-decoration: none;
+}
+
+.time {
+    color: #666;
+    font-weight: 400;
+    min-width: 80px;
+}

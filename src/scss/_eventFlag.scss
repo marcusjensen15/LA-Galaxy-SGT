@@ -1,0 +1,16 @@
+.location-flag {
+    height: 100%;
+
+    &-wrapper {
+        position: absolute;
+        top:33px;
+        left: 0px;
+        height: 80px;
+        width: auto;
+    }
+
+    &-text {
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+}

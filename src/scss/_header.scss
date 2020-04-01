@@ -1,0 +1,25 @@
+.header {
+    &-wrapper{
+        text-align: center;
+        padding:5px;
+        background: rgb(124, 37, 41);
+        border-bottom: solid 1px rgba(255,255,255,.4);
+    }
+
+    &-title{
+        width: 100%;
+        color:White;
+    }
+    
+    &-home .header-wrapper {
+        background-color: rgb(124, 37, 41);
+    }
+    
+    &-away .header-wrapper {
+        background-color: #666;
+    }
+    
+    &-away .content-holder .buttons-panel{
+        display: none;
+    }
+}

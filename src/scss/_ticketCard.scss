@@ -1,0 +1,38 @@
+.ticket-card {
+    position: relative;
+    height: 300px;
+    padding: 15px;
+
+    @media (max-width: 920px) {
+        width: 50%;
+        max-width: 50%;
+    }
+
+    @media (max-width: 620px) {
+        width: 100%;
+        max-width: 460px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-body {
+        height: 100%;
+        width: 100%;
+        border: solid .05em rgba(0,0,0,.5);
+        position: relative;
+        color: #666;
+        background: rgb(255,255,255);
+        -webkit-box-shadow: 0px 10px 13px -7px #000000, 3px 3px 10px 6px rgba(0,0,0,0.2); 
+        box-shadow: 0px 10px 13px -7px #000000, 3px 3px 10px 6px rgba(73, 31, 31, 0.2);
+        overflow: hidden;
+
+        &:hover .team {
+            color: rgb(82, 82, 82);
+        }
+        
+        &:hover .logo-holder {
+            padding: 0px;
+            filter: saturate(100%)
+        }
+    }
+}

@@ -6,3 +6,19 @@
     display: none;
     transition: ease-in-out 1s;
 }
+
+/* SRFC TICKET PAGE STYLES */
+h1 {
+    text-align: center;
+}
+.games-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 1000px) {
+        /* weird calc to adjust for padding/nargin in body */
+        width: calc(100% + 16px);
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+}
